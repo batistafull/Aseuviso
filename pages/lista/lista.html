@@ -1,0 +1,17 @@
+<div class="navbar-fixed">
+        <nav class="white">
+                     <div class="nav-wrapper">
+                         <div class="input-field">
+                           <input id="search" type="search" required name="q" ng-model="search">
+                           <label for="search"><i class="material-icons grey-text">search</i></label>
+                           <i class="material-icons">close</i>
+                         </div>
+                     </div>
+                   </nav></div>
+     <div class="collection">
+         <a class="collection-item avatar" href="#/user/{{post.MATRICULA}}" ng-repeat="post in posts | filter: search">
+           <i class="material-icons circle green">perm_identity</i>
+           <span class="title indigo-text">{{post.NOMBRE}} {{post.APELLIDOS}}</span>
+           <p class="grey-text">{{post.MATRICULA}}</p>
+         </a>
+       </div>
